@@ -35,3 +35,13 @@ The string may contain any possible characters out of all the 256 ASCII characte
 [DATE] = 07-JAN-2025
 
 """
+
+class Solution:
+    def entityParser(self, text: str) -> str:
+        return text \
+            .replace('&quot;', '\"')\
+            .replace('&apos;', "\'")\
+            .replace('&gt;', '>')\
+            .replace('&lt;', '<')\
+            .replace('&frasl;', '/')\
+            .replace('&amp;', '&')
